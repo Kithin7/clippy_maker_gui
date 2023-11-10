@@ -11,6 +11,8 @@ Python ffmpeg video clipping GUI because I'm tired of messing up in the command 
 - Radiobuttons and sliders for commonly changed settings for quicker clipping!
 - Customizable settings file to save your favorite settings and speed up clipping!
 - Output file size estimation to reduce clipping twice to get under 25 MB for sharing on [Discord](discord.com).
+### Usage Recommendation
+- 
 ## Screenshots
 ### This is the gui at start-up
 ![Screenshot of the gui at start](/gui_2.png)
