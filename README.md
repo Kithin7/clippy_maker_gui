@@ -10,8 +10,8 @@ from a terminal ```pip install xxx```
 - vlc
 
 # example
-![Screenshot of the gui at start](/example/gui_1.png)
-![Screenshot of the gui after selecting an input file](/example/gui_2.png)
+![Screenshot of the gui at start](/examples/gui_1.png)
+![Screenshot of the gui after selecting an input file](/examples/gui_2.png)
 
 # to-do list 
 - improve logic to remove "update source info" button
