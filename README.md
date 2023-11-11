@@ -11,7 +11,7 @@ Python ffmpeg video clipping GUI because I'm tired of messing up in the command 
 - Uses ```ffmpeg.probe``` to read metadata from the input file and do magic.
 - Radiobuttons and sliders for commonly changed settings for quicker clipping!
 - Customizable settings file to save your favorite settings and speed up clipping!
-- Output file size estimation to reduce clipping twice to get under 25 MB for sharing on [Discord](discord.com).
+- Output file size estimation to reduce clipping twice to get under 25 MB for sharing on [Discord](https://discord.com/download).
 ### Recommendations
 - To record, NVidia ShadowPlay works pretty well. OBS is another solid option. Honestly, whatever floats your boat (but be mindful of bloaty programs like Overwolf).
 - I've found myself really only needing to record the last 30 seconds or so, but I have ShadowPlay set to 75 seconds
