@@ -1,10 +1,10 @@
 # clippy_maker_gui.py
 Python ffmpeg video clipping GUI because I'm tired of messing up in the command line and "I'm a visual person" who wanted to experience the pain of coding a GUI.
 ## Table of Contents
-- [About](https://github.com/Kithin7/clippy_maker_gui/edit/main/README.md#about-%EF%B8%8F)
-- [Installation](https://github.com/Kithin7/clippy_maker_gui/edit/main/README.md#installation)
-- [To-do List](https://github.com/Kithin7/clippy_maker_gui/edit/main/README.md#to-do-list)
-- [Release History](https://github.com/Kithin7/clippy_maker_gui/edit/main/README.md#realse-history)
+- [About](https://github.com/Kithin7/clippy_maker_gui/blob/main/README.md#about-%EF%B8%8F)
+- [Installation](https://github.com/Kithin7/clippy_maker_gui/blob/main/README.md#installation)
+- [To-do List](https://github.com/Kithin7/clippy_maker_gui/blob/main/README.md#to-do-list)
+- [Release History](https://github.com/Kithin7/clippy_maker_gui/blob/main/README.md#realse-history)
 
 # About 🎞️
 - GUI/front end for ffmpeg-python script to make clips from video files. 
