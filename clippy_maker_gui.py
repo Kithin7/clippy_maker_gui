@@ -123,7 +123,7 @@ def update_source_info():
         source_.update({"Bitrate": str(
             round(int(ffmpeg.probe(inputfile.get())["format"]['bit_rate']) / 1024 / 1024, 2)) + ' Mbps'})
 
-    if detect_type == ".mkv":   # .mkv from ShadowPlay
+    elif detect_type == ".mkv":   # .mkv from ShadowPlay
         source_.update({"Filetype": detect_type})
         source_.update({"FPS": str(ffmpeg.probe(inputfile.get())["streams"][0]["r_frame_rate"]
                                    [:ffmpeg.probe(inputfile.get())["streams"][0]["r_frame_rate"].index('/')])})
