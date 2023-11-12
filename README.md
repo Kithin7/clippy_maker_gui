@@ -26,7 +26,8 @@ Python ffmpeg video clipping GUI because I'm tired of messing up in the command 
 ![Screenshot of the gui after selecting an input file](/gui_1.png)
 
 # Installation
-download the files ```clippy_maker_gui.py``` and ```clip_script.py``` and put them in the same directory and run from there.
+- download the file ```clippy_maker_gui.py```  and run it.
+- (optional) download ```clip_script_<xxx>.py```, they are the individual scripts---they might need some masssaging to work (read through and make sure you give the inputs correctly).
 ### Dependencies
 - [tkinter](https://docs.python.org/3/library/tkinter.html#module-tkinter)
 - [RangeSlider](https://pypi.org/project/RangeSlider/)
