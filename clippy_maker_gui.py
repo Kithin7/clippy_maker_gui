@@ -264,26 +264,26 @@ def clip_it():
     print('clipping...')
 
     # prep info for input
-    type_input = str(t_btn_group[int(TY_.get())]['text'])
-    fps_input = int(fps_btn_group[int(FPS_.get())]['text'])
-    #res_input = str(res_btn_group[int(RES_.get()))]['text'])
-    method_input = int(MET_.get())
+    type_input = str(t_btn_group[int(TY_.get())-1]['text'][t_btn_group[int(TY_.get())-1]['text'].index('.'):-1])
+    fps_input = int(fps_btn_group[int(FPS_.get())-1]['text'][-3:-1])
+    #res_input = str(res_btn_group[int(RES_.get()))-1]['text'])
+    method_input = int(MET_.get())-1
     print(method_input)
 
     # call clip script based on choice
-    if method_input == 1:
+    if method_input == 0:
         ffclip_kithin(inputfile.get(),
                       savefile.get(),
                       hSlider.getValues()[0],
                       hSlider.getValues()[1]-hSlider.getValues()[0],
                       fps_input,
                       type_input[1:])
-    elif method_input == 2:
+    elif method_input == 1:
         ffclip_springhalo(inputfile.get(),
                           savefile.get(),
                           hSlider.getValues()[0],
                           hSlider.getValues()[1])
-    elif method_input == 3:
+    elif method_input == 2:
         mb.showerror('METHOD ERROR', 'Choose another method...', icon='error')
     else:
         mb.showerror('METHOD ERROR', 'Choose another method...', icon='error')
