@@ -14,7 +14,7 @@ Python ffmpeg video clipping GUI because I'm tired of messing up in the command 
 - Customizable settings file to save your favorite settings and speed up clipping!
 - Output file size estimation to reduce clipping twice to get under 25 MB for sharing on [Discord](https://discord.com/download).
 ### Recommendations
-- To record, NVidia ShadowPlay works pretty well. OBS is another solid option. Honestly, whatever floats your boat (but be mindful of bloaty programs like Overwolf).
+- To record, [NVIDIA ShadowPlay](https://www.nvidia.com/en-us/geforce/geforce-experience/shadowplay/) works pretty well. [OBS](https://obsproject.com/) is another solid option. Honestly, whatever floats your boat (but be mindful of bloaty programs like Overwolf).
 - I've found myself really only needing to record the last 30 seconds or so, but I have ShadowPlay set to 75 seconds
     - My ShadowPlay settings: 75 sec, downscale to 720p (from 1440p), 60 fps, bitrate 25 Mbps
         - The bitrate is probably like 2-3x too high but everything looks good to me. Might be a good starting point and then working it down from there.
@@ -29,17 +29,18 @@ Python ffmpeg video clipping GUI because I'm tired of messing up in the command 
 - download the file ```clippy_maker_gui.py```  and run it.
 - (optional) download ```clip_script_<xxx>.py```, they are the individual scripts---they might need some masssaging to work (read through and make sure you give the inputs correctly).
 ### Dependencies
-- [tkinter](https://docs.python.org/3/library/tkinter.html#module-tkinter)
+- [tkinter](https://docs.python.org/3/library/tkinter.html#module-tkinter) - *this is part of the python standard lib*
 - [RangeSlider](https://pypi.org/project/RangeSlider/)
 - [ffmpeg](https://pypi.org/project/ffmpeg-python/)
-- [vlc](https://pypi.org/project/python-vlc/)
+- [vlc](https://pypi.org/project/python-vlc/) - *not needed yet...?*
 
 # To-do List 
-- improve logic to remove "update source info" button
+- improve logic to remove ```update source info``` button
 - make ```resolution``` selection do something
 - add codecs to ffmpeg probe
-    - and then add buttons to beable to choose? might have too many options or options that conflict? idk
-- improve estimated size calc
+    - like .mkv, but it might be similar to .mp4, idk yet
+    - and then add buttons to be able to choose? might have too many options or options that conflict? idk yet
+- improve ```estimated size calc```
 
 # Release History
 ## v2023.1?.??
