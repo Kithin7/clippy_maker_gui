@@ -1,5 +1,3 @@
-# couple of ways to clip and process
-
 # SpringHalo's Method
 import ffmpeg   # pip install ffmpeg-python
 import sys
