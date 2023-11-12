@@ -10,6 +10,7 @@ Python ffmpeg video clipping GUI because I'm tired of messing up in the command 
 - GUI/front end for ffmpeg-python script to make clips from video files. 
 - Uses ```ffmpeg.probe``` to read metadata from the input file and do magic.
 - Radiobuttons and sliders for commonly changed settings for quicker clipping!
+    - currently ```resolution``` does nothing
 - Customizable settings file to save your favorite settings and speed up clipping!
 - Output file size estimation to reduce clipping twice to get under 25 MB for sharing on [Discord](https://discord.com/download).
 ### Recommendations
@@ -34,12 +35,14 @@ download the files ```clippy_maker_gui.py``` and ```clip_script.py``` and put th
 
 # To-do List 
 - improve logic to remove "update source info" button
+- make ```resolution``` selection do something
 - add codecs to ffmpeg probe
     - and then add buttons to beable to choose? might have too many options or options that conflict? idk
 - improve estimated size calc
 
 # Release History
-## v2023.11.??
-- 
-## v2023.11.??
+## v2023.1?.??
+- *WIP, coming soon*
+  
+## v2023.11.12
 - release version
