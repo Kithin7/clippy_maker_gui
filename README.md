@@ -35,12 +35,17 @@ Python ffmpeg video clipping GUI because I'm tired of messing up in the command 
 - [vlc](https://pypi.org/project/python-vlc/) - *not needed yet...?*
 
 # To-do List 
+- need to make 2-pass/quality method default and 1-pass/fast alternate. 
 - improve logic to remove ```update source info``` button
 - make ```resolution``` selection do something
 - add codecs to ffmpeg probe
     - like .mkv, but it might be similar to .mp4, idk yet
     - and then add buttons to be able to choose? might have too many options or options that conflict? idk yet
 - improve ```estimated size calc```
+- ```play on complete?``` button, need to make it actually work (either with VLC or explorer)
+- Need to improve the workflow...
+    - I have pull up the folder, open the file in VLC to find the clipping spots, then come back to the gui. This could be streamlined by embedding the player into the gui to incorporate all in one place. 
+- Add optional compiled .exe version (py2exe output) once I'm happier about the state of the program (slimmed down & tuned up).
 
 # Release History
 ## v2023.1?.??
