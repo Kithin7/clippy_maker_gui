@@ -523,6 +523,7 @@ for i in range(len(mettext)):
     met_btn = tk.Radiobutton(mainframe, text=mettext[i], value=i+1, variable=MET_)
     met_btn.grid(row=ROW, column=3, padx=10, sticky="W")
     met_btn_group.append(met_btn)
+MET_.set(2)
 
 # vert sep bar
 ROW -= len(restext)
