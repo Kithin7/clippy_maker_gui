@@ -1,0 +1,8 @@
+# settings file for clippy_maker_gui.py
+Filetype=.webm
+FPS=30
+Resolution=720p
+PlayCheck=1
+ShowCheck=1
+Start=0
+Stop=1

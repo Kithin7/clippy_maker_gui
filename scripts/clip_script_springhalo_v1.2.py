@@ -1,0 +1,79 @@
+import ffmpeg
+import sys
+import os
+
+#version 1.2
+# patch notes:
+# added support for timestamps in MM:SS format
+# added support for downscaling to 1080p if video is bigger
+# added bitrate, filesize
+
+# input arguments: filename-as-full-path, output_name, start time, end time
+# output_name doesn't need file extension (webm auto-added)
+# eg. "D:\Videos\Shadowplay\Battlefield 2042\Replay 2023-08-28 18-47-14.mkv" outputname 45 54
+
+# bitrate is in bits, filesize is in bytes
+MAX_BITRATE = 15*1000000
+MAX_HEIGHT = 720
+MAX_FILESIZE = 9.5*1000000
+
+def abr_vbr_1st_pass(inputPath, params):
+
+    params.update({
+                    'pass': 1,
+                    'cpu-used': 4, #skip complex encoding for speed
+                    'f': 'null'
+                    })
+    ffInput = ffmpeg.input(inputPath)
+    ffOutput = ffInput.output('pipe:', **params)
+    ffOutput = ffOutput.global_args('-loglevel', 'info')
+    ffOutput.run(overwrite_output=True)
+
+    return params
+
+def abr_vbr_2nd_pass(inputPath, outputPath, params):
+
+    params.update({
+                    'pass': 2,
+                    'cpu-used': 2, # balanced encoding speed
+                    'f': 'webm'
+                    })
+    ffInput = ffmpeg.input(inputPath)
+    ffOutput = ffInput.output(
+                              outputPath,
+                              **params
+                              )
+    ffOutput = ffOutput.global_args('-loglevel', 'info')
+    ffOutput.run(overwrite_output=True)
+
+# set input arguments to variables for better readability
+inputPath = sys.argv[1]
+outputPath = os.getcwd()+"\\"+sys.argv[2]+".webm"
+
+# convert mm:ss to seconds for later maths
+start_time = sum(int(x) * 60 ** i for i, x in enumerate(reversed(sys.argv[3].split(':'))))
+end_time = sum(int(x) * 60 ** i for i, x in enumerate(reversed(sys.argv[4].split(':'))))
+
+# create scaling string to scale down to max_height or the input height, whichever is smaller
+#video_filters = "scale=-1:'min("+str(MAX_HEIGHT)+",ih)'"
+#also crops from 21:9 ultrawide back to 16:9
+video_filters = f"crop=ih*16/9:ih,scale=-1:'min({MAX_HEIGHT},ih)'"
+
+# set bitrate to 15Mbit or keep below 22MB
+bitrate = MAX_FILESIZE*8/(int(end_time) - int(start_time))
+if bitrate > MAX_BITRATE:
+    bitrate = MAX_BITRATE
+
+params =    {
+            'ss': start_time,
+            'to': end_time,
+            'vf': video_filters,
+            'r': 30,
+            'row-mt': 1,
+            'c:v': 'libvpx-vp9',
+            'f': 'webm',
+            'b:v': bitrate
+            }
+
+params = abr_vbr_1st_pass(inputPath, params)
+abr_vbr_2nd_pass(inputPath, outputPath, params)
