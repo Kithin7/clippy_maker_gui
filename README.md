@@ -35,21 +35,29 @@ Python ffmpeg video clipping GUI because I'm tired of messing up in the command 
 - [vlc](https://pypi.org/project/python-vlc/) - *not needed yet...?*
 
 # To-do List 
-- need to make 2-pass/quality method default and 1-pass/fast alternate. 
+- DONE ~~```play on complete?``` button, need to make it actually work (either with VLC or explorer)~~
+- DONE ~~need to make 2-pass/quality method default and 1-pass/fast alternate.~~
 - improve logic to remove ```update source info``` button
 - make ```resolution``` selection do something
 - add codecs to ffmpeg probe
     - like .mkv, but it might be similar to .mp4, idk yet
     - and then add buttons to be able to choose? might have too many options or options that conflict? idk yet
 - improve ```estimated size calc```
-- ```play on complete?``` button, need to make it actually work (either with VLC or explorer)
 - Need to improve the workflow...
     - I have pull up the folder, open the file in VLC to find the clipping spots, then come back to the gui. This could be streamlined by embedding the player into the gui to incorporate all in one place. 
 - Add optional compiled .exe version (py2exe output) once I'm happier about the state of the program (slimmed down & tuned up).
+- dropdown instead of radial buttons
+- ```filename``` and ```savename``` defaults should be moved to ```clip_settings.txt``` for easier startup folder handling
 
 # Release History
-## v2023.1?.??
-- *WIP, coming soon*
-  
-## v2023.11.12
+## 2026.10.31
+- playback on vlc actually works now
+- open folder actually works now
+- more rng names and added date + time
+- updated SpringHalo script
+- threaded still works but i should make a new thread for the player, but meh
+## idk
+- there were random small updates here and there...
+- now with threads!
+## 2023.11.12
 - release version
